@@ -5,7 +5,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { Request } from '@nestjs/common';
 import { RegisterDto } from 'src/dtos/RegisterDto.dto';
 
-@Controller('auth')
+@Controller('Event_mng_syst/v1/auth')
 export class AuthController {
 
     constructor(
@@ -39,14 +39,7 @@ export class AuthController {
     };
   }
 
-  @UseGuards(AuthGuard)
-  @Get('protectedRoute')
-  protectedResourceRoute(@Request() req) {
-    return {
-      message: 'hello here is the protected resources',
-      user: req.user,
-    };
-  }
+  
 
   
 }
