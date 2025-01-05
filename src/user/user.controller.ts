@@ -1,6 +1,8 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, UseGuards,Request } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 
-@Controller('nest_security_api/v1')
+
+@Controller('Event_mng_syst/v1')
 export class UserController {
 
     
@@ -10,5 +12,15 @@ export class UserController {
     return "users[]";
  }
 
+
+
+ @UseGuards(AuthGuard)
+  @Get('protectedRoute')
+ protectedResourceRoute(@Request() req) {
+   return {
+     message: 'hello here is the protected resources',
+     user: req.user,
+   };
+ }
  
 }
