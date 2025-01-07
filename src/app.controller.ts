@@ -11,13 +11,6 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @UseGuards(AuthGuard)
-  @Get('protectedRoute')
-  protectedResourceRoute(@Request() req) {
-    return {
-      message: 'hello here is the protected resources',
-      user: req.user,
-    };
-  }
+ 
   
 }

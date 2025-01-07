@@ -5,6 +5,9 @@ import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class UserService {
+    validateUser(userEmail: string, userPassword: string) {
+      throw new Error('Method not implemented.');
+    }
 
     constructor(
         

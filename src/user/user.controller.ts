@@ -15,7 +15,7 @@ export class UserController {
 
 
  @UseGuards(AuthGuard)
-  @Get('protectedRoute')
+  @Get('/protectedRoute')
  protectedResourceRoute(@Request() req) {
    return {
      message: 'hello here is the protected resources',
