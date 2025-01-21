@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Registration } from "src/registrations/schema/Registration";
+import { Column, Entity, JoinColumn, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity('users')
@@ -21,6 +22,10 @@ export class Users{
    
     @Column({type:'varchar',nullable:false})
     isAdmin:string;
+
+    @OneToMany(()=>Registration,(registration)=>registration.userId)
+    @JoinColumn({name:'userId'})
+    userRegistrations: Registration
     
 
 }

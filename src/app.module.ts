@@ -5,7 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { EventModule } from './event/event.module';
 import { RegistrationsModule } from './registrations/registrations.module';
-import { RegistrationController } from './registration/registration.controller';
+import { RegistrationController } from './registrations/registrations.controller';
 
 @Module({
   imports: [

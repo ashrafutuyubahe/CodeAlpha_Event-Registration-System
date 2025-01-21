@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Registration } from 'src/registrations/schema/Registration';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('events')
 export class Event {
@@ -19,4 +20,7 @@ export class Event {
 
   @Column({ type: 'varchar', nullable: false })
   location: string;
+
+  @OneToMany(()=>Registration,(registration)=>registration.eventId)
+  eventRegistrations:Registration[];
 }
