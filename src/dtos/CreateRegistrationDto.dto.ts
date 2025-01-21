@@ -21,5 +21,5 @@ export class CreateRegistrationDto {
 
   @IsNotEmpty()
   @IsString()
-  status: string;
+  status: string
 }

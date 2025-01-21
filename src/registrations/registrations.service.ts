@@ -23,7 +23,7 @@ export class RegistrationsService {
   }
 
 
-  async create(createRegistrationDto: CreateRegistrationDto): Promise<Registration> {
+  async create(createRegistrationDto: CreateRegistrationDto){
     const newRegistration = this.registrationRepository.create(createRegistrationDto);
     return await this.registrationRepository.save(newRegistration);
   }

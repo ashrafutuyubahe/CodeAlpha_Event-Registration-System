@@ -39,7 +39,7 @@ import {
       return await this.registrationService.create(createRegistrationDto);
     }
   
-    // Update an existing registration
+   
     @Put(':id')
     async update(
       @Param('id') id: number,
