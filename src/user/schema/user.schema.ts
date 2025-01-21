@@ -18,7 +18,9 @@ export class Users{
 
     @Column({type:'varchar',nullable:false})
     userPassword:string;
-
+   
+    @Column({type:'varchar',nullable:false})
+    isAdmin:string;
     
 
 }
