@@ -43,7 +43,7 @@ import {
     @Put(':id')
     async update(
       @Param('id') id: number,
-      @Body() updateRegistrationDto: CreateRegistrationDto,
+      @Body() updateRegistrationDto: UpdateRegisterDto,
     ) {
       const updated = await this.registrationService.update(
         id,
